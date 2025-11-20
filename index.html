@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathData 2025 – Day vs Night Classification</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+        background: #faf9f7;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    header {
+        background: linear-gradient(135deg, #4b79a1, #283e51);
+        padding: 60px 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+    }
+
+    header p {
+        opacity: 0.9;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .section {
+        background: #fff;
+        padding: 25px;
+        margin: 20px 0;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.15s ease;
+    }
+
+    .section:hover {
+        transform: translateY(-3px);
+    }
+
+    h2 {
+        color: #283e51;
+        margin-top: 0;
+        font-size: 1.8rem;
+    }
+
+    ul {
+        margin-top: 10px;
+    }
+
+    .code {
+        background: #f1f1f4;
+        padding: 12px;
+        border-radius: 8px;
+        font-family: monospace;
+        overflow-x: auto;
+    }
+
+    img.chart {
+        width: 100%;
+        margin: 15px 0;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+        background: #283e51;
+        text-align: center;
+        color: #fff;
+        padding: 25px;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MathData 2025</h1>
+    <p>Day vs Night Image Classification Using Deep Learning</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>🌞🌙 Project Overview</h2>
+        <p>
+            This project explores the task of distinguishing <strong>daytime</strong> from 
+            <strong>nighttime</strong> images using convolutional neural networks. 
+            I trained multiple architectures, compared hyperparameters, and analyzed the 
+            effects of augmentation — all fully logged using <strong>Weights & Biases</strong>.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>📁 Dataset</h2>
+        <p>The dataset contains two folders:</p>
+        <ul>
+            <li><strong>day/</strong> – images captured in daylight</li>
+            <li><strong>night/</strong> – images captured in low-light/nighttime</li>
+        </ul>
+        <p>
+            All images were preprocessed to 227×227 pixels for AlexNet compatibility.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🧠 Models Trained</h2>
+        <p>I experimented with three architectures:</p>
+        <ul>
+            <li><strong>AlexNet</strong> (custom implementation)</li>
+            <li><strong>VGG-16</strong> (pretrained)</li>
+            <li><strong>ResNet-18</strong> (pretrained)</li>
+        </ul>
+        <p>
+            Each model was trained using PyTorch and evaluated on the same test set for fairness.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>⚗️ Experiments</h2>
+        <p>I ran a structured set of experiments required by the course:</p>
+
+        <ul>
+            <li>Batch Size: <strong>16 vs 64</strong></li>
+            <li>Learning Rate: <strong>0.001 vs 0.0001</strong></li>
+            <li>With vs Without Data Augmentation</li>
+            <li>Architecture comparison (AlexNet vs VGG16 vs ResNet18)</li>
+        </ul>
+
+        <p>Each run was tracked with Weights & Biases.</p>
+
+        <div class="code">
+            {"batch_size": 32, "lr": 0.001, "augmentation": true, "model": "alexnet"}
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📊 Results</h2>
+        <p>
+            All experiment metrics — accuracy curves, loss trends, confusion matrices, and run comparisons —
+            are logged in my <strong>W&B Dashboard</strong>.
+        </p>
+
+        <p>You can replace these placeholder images with real charts:</p>
+
+        <img class="chart" src="https://dummyimage.com/800x350/e1e1e1/555&text=Accuracy+Curve" alt="Accuracy Curve">
+        <img class="chart" src="https://dummyimage.com/800x350/e1e1e1/555&text=Loss+Curve" alt="Loss Curve">
+        <img class="chart" src="https://dummyimage.com/800x350/e1e1e1/555&text=Confusion+Matrix" alt="Confusion Matrix">
+    </div>
+
+    <div class="section">
+        <h2>📜 About the Code</h2>
+        <p>The full training pipeline is implemented in Python using PyTorch. Here is a simplified view:</p>
+
+        <div class="code">
+            def train_model(model, train_loader, test_loader):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;for epoch in range(epochs):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# training<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# evaluation<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# wandb logging<br>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>MathData 2025 • Built with ❤️ using PyTorch & Weights & Biases</p>
+</footer>
+
+</body>
+</html>
