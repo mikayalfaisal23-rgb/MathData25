@@ -58,6 +58,12 @@
         font-size: 1.8rem;
     }
 
+    h3 {
+        color: #4b79a1;
+        margin-top: 15px;
+        font-size: 1.4rem;
+    }
+
     ul {
         margin-top: 10px;
     }
@@ -152,15 +158,21 @@
     <div class="section">
         <h2>📊 Results</h2>
         <p>
-            All experiment metrics — accuracy curves, loss trends, confusion matrices, and run comparisons —
-            are logged in my <strong>W&B Dashboard</strong>.
+            Below are the real results generated from the training experiments.  
+            These charts are produced in Google Colab and saved directly into the GitHub repository.
         </p>
 
-        <p>You can replace these placeholder images with real charts:</p>
+        <h3>📈 Accuracy Comparison (All Experiments)</h3>
+        <p>This bar chart compares every experiment: different batch sizes, learning rates, augmentation settings, and architectures.</p>
+        <img class="chart" src="accuracy_comparison.png" alt="Accuracy Comparison Bar Chart">
 
-        <img class="chart" src="https://dummyimage.com/800x350/e1e1e1/555&text=Accuracy+Curve" alt="Accuracy Curve">
-        <img class="chart" src="https://dummyimage.com/800x350/e1e1e1/555&text=Loss+Curve" alt="Loss Curve">
-        <img class="chart" src="https://dummyimage.com/800x350/e1e1e1/555&text=Confusion+Matrix" alt="Confusion Matrix">
+        <h3>📉 Test Accuracy Curves</h3>
+        <p>This figure shows accuracy across epochs for all model configurations.</p>
+        <img class="chart" src="test_accuracy_curves.png" alt="Test Accuracy Curves">
+
+        <h3>🧩 Confusion Matrix</h3>
+        <p>The confusion matrix shows how well the classifier separates day vs night images.</p>
+        <img class="chart" src="confusion_matrix.png" alt="Confusion Matrix">
     </div>
 
     <div class="section">
